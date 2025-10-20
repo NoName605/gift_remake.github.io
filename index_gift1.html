@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gift For You</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background: linear-gradient(to right, #000000, #000000);
+            color: rgb(255, 255, 255);
+            font-family: Arial, sans-serif;
+        }
+
+        /* setiap halaman diatur dengan ukuran penuh */
+        .halaman {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            /* biar tumpuk di atas satu sama lain */
+            top: 0;
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transition: opacity 0.5s ease;
+        }
+
+        #halaman1 {
+            background-color: rgba(249, 249, 249, 0.2);
+        }
+
+        #halaman2 {
+            background-color: rgba(0, 0, 0, 0.2);
+            display: none;
+            /* disembunyikan dari awal */
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 12px 30px;
+            font-size: 18px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            background-color: #fbfbfb;
+            color: rgb(0, 0, 0);
+            transition: 0.3s;
+            position: absolute;
+            top: 350px;
+        }
+
+        button:hover {
+            background-color: #ffffff;
+        }
+
+
+        .fck {
+            width: 400px;
+            position: absolute;
+            top: 40px;
+            border-radius: 100px;
+        }
+
+        .yg1 {
+            position: absolute;
+            top: 450px;
+        }
+
+        .hal1 {
+            position: absolute;
+            top: 300px;
+
+        }
+
+        .b2 {
+            position: absolute;
+            background-color: rgb(255, 255, 255);
+            width: 20px;
+            height: 50px;
+        }
+
+        .box1 {
+            position: absolute;
+            background-color: #ff0202;
+            width: 100px;
+            height: 50px;
+        }
+
+        .b3 {
+            position: absolute;
+            background-color: #ff0202;
+            width: 110px;
+            height: 20px;
+            top: 252px;
+        }
+
+        .b4 {
+            position: absolute;
+            background-color: #fbfbfb;
+            width: 30px;
+            height: 24px;
+            top: 248px;
+        }
+
+        .a1 {
+            position: absolute;
+            font-size: 100px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="halaman1" class="halaman">
+        <h1 class="hal1">Gift For You</h1>
+        <button onclick="gantiHalaman()">Open</button>
+        <div class="box1">
+            .
+        </div>
+
+        <div class="b2">
+            .
+        </div>
+        <div class="b3">
+            .
+        </div>
+        <div class="b4">
+            .
+        </div>
+    </div>
+
+    <div id="halaman2" class="halaman">
+        <h1 class="yg1">Ngarep Bet Dah</h1>
+        <div class="a1">
+            😜
+        </div>
+    </div>
+
+    <script>
+        function gantiHalaman() {
+            document.getElementById("halaman1").style.display = "none";
+            document.getElementById("halaman2").style.display = "flex";
+        }
+
+        function kembali() {
+            document.getElementById("halaman2").style.display = "none";
+            document.getElementById("halaman1").style.display = "flex";
+        }
+    </script>
+
+</body>
+
+</html>
